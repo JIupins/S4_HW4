@@ -13,6 +13,4 @@ namespace Contracts
 
         public RoleType Role { get; set; } = RoleType.User;
     }
-
-
 }

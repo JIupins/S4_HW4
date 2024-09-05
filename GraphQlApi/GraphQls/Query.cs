@@ -1,8 +1,5 @@
 ﻿using Contracts.Response;
-using HotChocolate.Authorization;
-
 namespace GraphQlApi.GraphQls;
-
 
 public class Query
 {
@@ -12,7 +9,6 @@ public class Query
     {
         _service = service;
     }
-
 
     public async Task<ResultResponse?> SecretUser()
     => await _service.Get<ResultResponse>("https://localhost:7224/registration/secret-user") ;

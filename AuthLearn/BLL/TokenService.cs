@@ -15,7 +15,6 @@ public class TokenService : ITokenService
         _jwt = jwt;
     }
 
-
     public string GenerateToken(string email, string roleName)
     {
         var credentials = new SigningCredentials(_jwt.GetSigningKey(), SecurityAlgorithms.HmacSha256);
@@ -34,6 +33,4 @@ public class TokenService : ITokenService
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
-
-
 }

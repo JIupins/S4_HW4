@@ -11,4 +11,3 @@ public class JwtConfiguration
 
     internal SymmetricSecurityKey GetSigningKey()=> new(Encoding.UTF8.GetBytes(Key));
 }
-

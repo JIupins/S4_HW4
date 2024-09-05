@@ -14,7 +14,6 @@ builder.Services.AddDbContext<AuthContext>(options =>
         ?? throw new Exception("PostgreSql not found in configuration") );
 });
 
-
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IEncryptService, EncryptService>();
@@ -73,7 +72,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
            });
 
 
-
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -83,7 +81,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 
 app.UseHttpsRedirection();
 

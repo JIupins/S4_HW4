@@ -33,14 +33,12 @@ public class RegisterController : ControllerBase
         return result;
     }
 
-
     [Authorize(Roles = "Administrator, User")]
     [HttpGet(template:"secret-user")]
     public ActionResult<ResultResponse> Secret()
     {
         return Ok(new ResultResponse { Success = true });
     }
-
 
     [Authorize(Roles = "Administrator")]
     [HttpGet(template: "secret-admin")]

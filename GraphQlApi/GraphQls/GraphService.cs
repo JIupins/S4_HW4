@@ -9,7 +9,6 @@ public class GraphService : IGraphService
         _client = client;
     }
 
-
     public async Task<T?> Get<T>(string url)
     {
         var result = await _client.GetFromJsonAsync<T>(url);
